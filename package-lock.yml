@@ -1,0 +1,14 @@
+packages:
+- package: Datavault-UK/automate_dv
+  version: 0.11.0
+- package: dbt-labs/dbt_utils
+  version: 1.1.1
+- package: calogica/dbt_date
+  version: 0.10.0
+- package: dbt-labs/dbt_external_tables
+  version: 0.8.7
+- package: dbt-labs/dbt_project_evaluator
+  version: 0.8.1
+- package: calogica/dbt_expectations
+  version: 0.10.3
+sha1_hash: a56995a8e9c6e215fb892e3ebb185ab52f363d3b

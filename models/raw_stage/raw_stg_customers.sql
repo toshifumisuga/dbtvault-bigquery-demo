@@ -3,4 +3,4 @@ select
     first_name,
     last_name
 
-from `dbt-tutorial`.jaffle_shop.customers
+from `lot-data-platform-dev`.misc_datavault_test.raw_customers

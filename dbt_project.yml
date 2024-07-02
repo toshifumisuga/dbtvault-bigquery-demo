@@ -55,3 +55,5 @@ models:
       satellite:
         tags:
           - 'satellite'
+seeds:
+  dbtvault_bigquery_demo:

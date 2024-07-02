@@ -2,6 +2,7 @@
 source_model: 'raw_stg_orders'
 derived_columns:
   ORDER_KEY: 'order_id'
+  # 後続で意味をなすので、一旦説明は割愛
   RECORD_SOURCE: '!order'
   # source_model側のcreate_time等を利用して、作成されたタイミングの日付を残す。
   # → 変更履歴を管理するため、該当データがいつ時点で作成されたものか、という情報が有用です。
@@ -41,7 +42,7 @@ hashed_columns:
 {% set hashed_columns = metadata_dict['hashed_columns'] %}
 
 {{ automate_dv.stage(include_source_columns=true,
-                    source_model=source_model,
-                    derived_columns=derived_columns,
-                    hashed_columns=hashed_columns,
-                    ranked_columns=none) }}
+                     source_model=source_model,
+                     derived_columns=derived_columns,
+                     hashed_columns=hashed_columns,
+                     ranked_columns=none) }}

@@ -24,7 +24,7 @@ hashed_columns:
 {% set hashed_columns = metadata_dict['hashed_columns'] %}
 
 {{ automate_dv.stage(include_source_columns=true,
-                    source_model=source_model,
-                    derived_columns=derived_columns,
-                    hashed_columns=hashed_columns,
-                    ranked_columns=none) }}
+                     source_model=source_model,
+                     derived_columns=derived_columns,
+                     hashed_columns=hashed_columns,
+                     ranked_columns=none) }}

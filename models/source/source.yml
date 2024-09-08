@@ -1,0 +1,60 @@
+version: 2
+
+sources:
+  - name: dl_gss
+    schema: misc_datavault_test
+    tables:
+      - name: dl_gss_raw_payments
+        description: 注文に対する購買データ
+        external:
+          location: 'https://docs.google.com/spreadsheets/d/1zlmSW1iKh4rKbL8h1qJC7zEGvloKlDuJJFnctqJmjVc/edit?gid=0#gid=0'
+          options:
+            format: google_sheets
+            skip_leading_rows: 1
+        columns:
+          - name: order_id	
+            description: 注文ID
+            data_type: INT64
+          - name: payment_method
+            description: 購入方法
+            data_type: STRING
+          - name: amount
+            description: 購入量
+            data_type: INT64
+      - name: dl_gss_raw_orders
+        description: 顧客の注文データ
+        external:
+          location: 'https://docs.google.com/spreadsheets/d/1g-zHB-MazcWP8r0CAJ8AV6KaTLeAxWKzGk0XfyJGSkg/edit?gid=0#gid=0'
+          options:
+            format: google_sheets
+            skip_leading_rows: 1
+        columns:
+          - name: order_id
+            description: 注文ID
+            data_type: INT64
+          - name: customer_id	
+            description: 顧客ID
+            data_type: INT64
+          - name: order_date
+            description: 注文日
+            data_type: DATE
+          - name: status
+            description: 購入ステータス
+            data_type: STRING
+      - name: dl_gss_raw_customers
+        description: 顧客データ
+        external:
+          location: 'https://docs.google.com/spreadsheets/d/1iJzWe8Xf9wWuxSTenFRKYsCGo61nW9kE63v9ob7J8SY/edit?gid=0#gid=0'
+          options:
+            format: google_sheets
+            skip_leading_rows: 1
+        columns:
+          - name: customer_id	
+            description: 顧客ID
+            data_type: INT64
+          - name: first_name
+            description: 名前
+            data_type: STRING
+          - name: last_name
+            description: 苗字
+            data_type: STRING

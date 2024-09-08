@@ -1,6 +1,6 @@
-select
-    id as customer_id,
+SELECT
+    customer_id,
     first_name,
     last_name
-
-from `lot-data-platform-dev`.misc_datavault_test.raw_customers
+FROM
+    {{ source("dl_gss", "dl_gss_raw_customers") }}

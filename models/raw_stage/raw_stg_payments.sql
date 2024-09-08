@@ -1,7 +1,6 @@
-select
-    id,
+SELECT
     order_id,
     payment_method,
     amount
-
-from `lot-data-platform-dev`.misc_datavault_test.raw_payments
+FROM
+    {{ source("dl_gss", "dl_gss_raw_payments") }}

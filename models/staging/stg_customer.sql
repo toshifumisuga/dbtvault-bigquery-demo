@@ -1,5 +1,5 @@
 {%- set yaml_metadata -%}
-source_model: 'raw_stg_customers'
+source_model: 'raw_customers'
 derived_columns:
   RECORD_SOURCE: '!customers'
   EFFECTIVE_FROM: CURRENT_DATE()

@@ -1,5 +1,5 @@
 {%- set yaml_metadata -%}
-source_model: 'raw_stg_orders'
+source_model: 'raw_orders'
 derived_columns:
   ORDER_KEY: 'order_id'
   # 後続で意味をなすので、一旦説明は割愛

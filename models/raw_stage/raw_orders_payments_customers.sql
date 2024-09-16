@@ -5,6 +5,7 @@ SELECT
     raw_orders.customer_id,
     raw_orders.order_date,
     raw_orders.status,
+    raw_orders.update_date,
     raw_payments.payment_method,
     raw_payments.amount,
     raw_customers.first_name,

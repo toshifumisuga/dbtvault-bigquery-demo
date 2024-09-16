@@ -13,7 +13,7 @@ derived_columns:
   EFFECTIVE_FROM: 'order_date'
   # バッチの実行タイミング等を残すもの。
   # 何かバグがあった時に、いつ作成されたデータなのか判断する際に利用。
-  LOAD_DATE: CURRENT_DATE('Asia/Tokyo')
+  LOAD_DATE: "DATE('2024-09-17')"
   START_DATE: "order_date"
   END_DATE: "DATE('9999-12-31')"
   
@@ -37,6 +37,7 @@ hashed_columns:
       - CUSTOMER_KEY
       - EFFECTIVE_FROM
       - 'status'
+      - 'update_date'
   PAYMENT_HASHDIFF:
     is_hashdiff: true
     columns:

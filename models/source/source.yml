@@ -41,6 +41,9 @@ sources:
           - name: status
             description: 購入ステータス
             data_type: STRING
+          - name: update_date
+            description: 更新日
+            data_type: DATE
       - name: dl_gss_raw_customers
         description: 顧客データ
         external:

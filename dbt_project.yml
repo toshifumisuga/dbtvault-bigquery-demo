@@ -38,7 +38,7 @@ models:
       tags:
         - 'raw'
       +materialized: view
-    staging:
+    stage:
       tags:
         - 'stg'
       +materialized: view

@@ -1,6 +1,9 @@
-{%- set source_model = "stg_customer" -%}
-{%- set src_pk = "CUSTOMER_PK" -%}
-{%- set src_nk = "CUSTOMER_ID" -%}
+{{ config(materialized='incremental') }}
+
+{%- set source_model = "v_stg_orders" -%}
+# 複数の列を組み合わせる場合は、[]のようにリストを利用してください
+{%- set src_pk = "ORDER_PK" -%}
+{%- set src_nk = "ORDER_KEY" -%}
 {%- set src_ldts = "LOAD_DATE" -%}
 {%- set src_source = "RECORD_SOURCE" -%}
 

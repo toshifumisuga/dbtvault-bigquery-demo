@@ -1,7 +1,9 @@
-{%- set source_model = "stg_customer" -%}
-{%- set src_pk = "CUSTOMER_PK" -%}
-{%- set src_hashdiff = "CUSTOMER_HASHDIFF" -%}
-{%- set src_payload = ["CUSTOMER_ID","FIRST_NAME", "LAST_NAME"] -%}
+{{ config(materialized='incremental') }}
+
+{%- set source_model = "v_stg_orders" -%}
+{%- set src_pk = "ORDER_PK" -%}
+{%- set src_hashdiff = "ORDER_HASHDIFF" -%}
+{%- set src_payload = "status" -%}
 {%- set src_eff = "EFFECTIVE_FROM" -%}
 {%- set src_ldts = "LOAD_DATE" -%}
 {%- set src_source = "RECORD_SOURCE" -%}

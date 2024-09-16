@@ -1,6 +1,6 @@
 {{ config(materialized='incremental') }}
 
-{%- set source_model =["stg_order", "stg_customer"]-%}
+{%- set source_model ="v_stg_orders" -%}
 {%- set src_pk = "LINK_ORDER_CUSTOMER_PK" -%}
 {%- set src_fk = ["ORDER_PK", "CUSTOMER_PK"] -%}
 {%- set src_ldts = "LOAD_DATE" -%}

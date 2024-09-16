@@ -34,7 +34,7 @@ clean-targets:         # directories to be removed by `dbt clean`
 models:
   dbtvault_bigquery_demo:
     # Config indicated by + and applies to all files under models/example/
-    raw_stage:
+    raw:
       tags:
         - 'raw'
       +materialized: view
@@ -55,3 +55,5 @@ models:
       satellite:
         tags:
           - 'satellite'
+seeds:
+  dbtvault_bigquery_demo:
